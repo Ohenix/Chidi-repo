@@ -48,6 +48,18 @@ resource "aws_subnet" "Chidi-private-subnet" {
   }
 }
 
+resource "aws_subnet" "Chidi-private-subnet2" {
+  vpc_id            = aws_vpc.Chidi-VPC.id
+  cidr_block        = "10.0.155.0/24"
+  availability_zone = "eu-west-2b"
+
+
+  tags = {
+    Name = "Chidi-private-subnet2"
+
+  }
+}
+
 
 # public route table
 
